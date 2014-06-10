@@ -17,6 +17,9 @@ Gem::Specification.new do |s|
   s.files = Dir["{app,config,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
   s.add_dependency "rails", ">= 3.0"
+  s.add_dependency "jquery-rails"
+  s.add_dependency "flot-rails", "~> 0.0.6"
+  s.add_dependency "jquery-tablesorter", "~> 1.12.1"
 
   s.add_development_dependency 'sqlite3' # to avoid error on starting dummy app
   s.add_development_dependency 'rspec-rails', '~> 2.14.0'

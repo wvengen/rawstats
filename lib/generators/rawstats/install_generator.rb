@@ -35,6 +35,11 @@ module Rawstats
         create_file Rails.root + "vendor/assets/javascripts/rawstats.js" do
           %Q{
 #= require jquery
+#= require jquery.json
+#= require jquery-tablesorter
+#= require jquery.flot
+#= require jquery.flot.pie
+#= require jquery.flot.stack
           }
         end
       end

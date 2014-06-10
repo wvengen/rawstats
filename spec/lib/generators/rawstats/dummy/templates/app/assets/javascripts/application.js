@@ -1,3 +1,9 @@
 //= require jquery
 //= require jquery_ujs
+//= require jquery.json
+//= require jquery-tablesorter
+//= require jquery.flot
+//= require jquery.flot.pie
+//= require jquery.flot.label
+//= require jquery.flot.stack
 //= require_tree .
