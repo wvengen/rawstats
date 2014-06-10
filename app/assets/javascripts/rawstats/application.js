@@ -10,15 +10,16 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//= require jquery
+//= require jquery_ujs
+//= require jquery.json.js
+//= require jquery-tablesorter
+//= require jquery.flot.pie
+//= require jquery.flot.stack
 //= require rawstats/constants
 //= require rawstats/jawstats
 
-// hack to precompile both without changing javascript source
-if (g_sType == 'web') {
-//= require rawstats/jawstats_web
-} else if (g_sType == 'mail') {
-//= require rawstats/jawstats_mail
-}
+// either jawstats_web or jawstats_mail needs to be included separately
 
 // only one theme is supported right now
 //= require rawstats/themes/default.js

@@ -2,13 +2,39 @@
 <html>
 <head>
   <title>Rawstats</title>
-  <%= stylesheet_link_tag    "rawstats/application", media: "all" %>
-  <%= javascript_include_tag "rawstats/application" %>
+  <%= stylesheet_link_tag "rawstats/application", media: "all" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+  <div id='header'>
+    <img class='logo' style='float: left' src='<%= theme_image_path('images/logo') %>'>
+    <div class='container'>
+      <h1><span>Statistics for</span> (link) <span> in </span> (date)</h1>
 
+      <div id='summary'>
+        Last updated ....
+      </div>
+
+      <div id='menu'><%= navigation_menu %></div>
+      <br style='clear: both'>
+      <div id='loading'>&nbsp;</div>
+    </div>
+  </div>
+
+  <div id='main'>
+    <div class='container'>
+      <div id='content'>
+        <%= yield || '&nbsp;' %>
+      </div>
+      <div id='footer'>
+        <% #todo %>
+        <span id='version'>&nbsp;</span>
+      </div>
+    </div>
+  </div>
+
+<%= javascript_include_tag "rawstats/application" %>
+<%= content_for(:javascript) %>
 </body>
 </html>
