@@ -10,4 +10,15 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require_tree .
+//= require rawstats/constants
+//= require rawstats/jawstats
+
+// hack to precompile both without changing javascript source
+if (g_sType == 'web') {
+//= require rawstats/jawstats_web
+} else if (g_sType == 'mail') {
+//= require rawstats/jawstats_mail
+}
+
+// only one theme is supported right now
+//= require rawstats/themes/default.js
