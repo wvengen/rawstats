@@ -17,6 +17,7 @@ module Rawstats
     def rawstats_js_vars
       content_for :javascript, (
         view_context.javascript_include_tag("rawstats/jawstats_#{@type}") +
+        view_context.javascript_include_tag("rawstats/rawstats_monkeys") +
         view_context.javascript_tag("$.extend(window, #{{
           g_sConfig: nil,         # @todo site config
           g_sParts: [],           # @todo support parts
@@ -30,6 +31,7 @@ module Rawstats
           sThemeDir: 'default',   # @todo site config +theme+
           sUpdateFilename: nil,   # @todo
           oSubMenu: Rawstats.menu(@type),
+          sAppPath: view_context.root_path,
         }.to_json});")
       ).html_safe
     end
