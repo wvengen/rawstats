@@ -1,4 +1,5 @@
 require "rawstats/engine"
+require "rawstats/awstats_file"
 
 module Rawstats
 

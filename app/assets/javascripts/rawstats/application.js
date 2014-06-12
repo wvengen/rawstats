@@ -14,6 +14,8 @@
 //= require jquery_ujs
 //= require jquery.json.js
 //= require jquery-tablesorter
+//= require jquery.flot
+//= require jquery.flot.time
 //= require jquery.flot.pie
 //= require jquery.flot.stack
 //= require rawstats/constants
